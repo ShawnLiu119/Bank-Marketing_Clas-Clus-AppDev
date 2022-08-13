@@ -10,14 +10,14 @@ model=pickle.load(open(r"MobileApp/model.pkl",'rb'))     ## Load pickeled ml mod
 def main():
     """ main() contains all UI structure elements; getting and storing user data can be done within it"""
     st.title("Term Deposit Prediction")                                                                              ## Title/main heading
-    # st.image(r"titanic_sinking.jpg", caption="Sinking of 'RMS Titanic' : 15 April 1912 in North Atlantic Ocean",use_column_width=True) ## image import
+    st.image(r"MobileApp/bank.png", caption="Know your customers",use_column_width=True) ## image import
     st.write("""## Is the customer likely to subscriber term deposit?""")                                                    ## Sub heading
 
     ## Side Bar Configurations
-    st.sidebar.header("More Details:")
-    st.sidebar.markdown("[For More facts about the Titanic here](https://www.telegraph.co.uk/travel/lists/titanic-fascinating-facts/#:~:text=1.,2.)")
-    st.sidebar.markdown("[and here](https://titanicfacts.net/titanic-survivors/)")
-    st.title("-----          Check Your Survival Chances          -----")
+    # st.sidebar.header("More Details:")
+    # st.sidebar.markdown("[For More facts about the Titanic here](https://www.telegraph.co.uk/travel/lists/titanic-fascinating-facts/#:~:text=1.,2.)")
+    # st.sidebar.markdown("[and here](https://titanicfacts.net/titanic-survivors/)")
+    st.title("-----          Type in customer info and check his/her interest          -----")
 
     ## Framing UI Structure
     age = st.slider("Enter Age :", 1, 90, 30)
@@ -98,10 +98,10 @@ def main():
     pdays = st.slider("pdays :", 0, 999, 999) 
     PD = pdays/1000  
 
-    previous = st.slider("pdays :", 0, 7, 0)
+    previous = st.slider("previous :", 0, 7, 0)
     PRE = previous/7 
 
-    emp_rate = st.slider("pdays :", -3.5, 2.5, 1.4)
+    emp_rate = st.slider("emp_var_rate :", -3.5, 2.5, 1.4)
     EM = emp_rate/6
 
     price_idx = st.slider("price idx :", 92.000, 94.000, 93.994)
@@ -140,29 +140,29 @@ data=main()                             ## calling Main()
 ## Prediction:
 if st.button("Predict"):                                                                ## prediction button created,which returns predicted value from ml model(pickle file)
     result = model.predict(data)                                                        ## prediction of user-input
-    proba=model.predict_proba(data)                                                     ## probabilty prediction of user-input
+    proba=model.predict_proba(data)                                                   ## probabilty prediction of user-input
     #st.success('The output is {}'.format(result))
 
-    if result[0] == 1:
-        st.write("***congratulation !!!....*** **You probably would have made it!**")
-        st.image(r"lifeboat.jfif")
-        st.write("**Survival Probability Chances :** 'NO': {}%  'YES': {}% ".format(round((proba[0,0])*100,2),round((proba[0,1])*100,2)))
+    if result == 1:
+        st.write("***This customer is likely to subscribe....*** **You should reach out**")
+        # st.image(r"lifeboat.jfif")
+        st.write("**Subscription Probability Chances :** 'NO': {}%  'YES': {}% ".format(round((proba[0,0])*100,2),round((proba[0,1])*100,2)))
     else:
-        st.write("***Better Luck Next time !!!!...*** **you're probably Ended up like 'Jack'**")
-        st.image(r"Rip.jfif")
-        st.write("**Survival Probability Chances :** 'NO': {}%  'YES': {}% ".format(round((proba[0,0])*100,2),round((proba[0,1])*100,2)))
+        st.write("***This customer is probably not interested...***")
+        # st.image(r"Rip.jfif")
+        st.write("**Subscription Probability Chances :** 'NO': {}%  'YES': {}% ".format(round((proba[0,0])*100,2),round((proba[0,1])*100,2)))
 
-## Working Button:
-if st.button("Working"):                                                      # creating Working button, which gets some survival tips & info.
-    st.write("""# How's prediction Working :- Insider Survival Facts and Tips: 
-             - Only about `32%` of passengers survived In this Accident\n
-             - Ticket price:
-                    1st-class: $150-$435 ; 2nd-class: $60 ; 3rd-class: $15-$40\n
-             - About Family Factor:
-                If You Boarded with atleast one family member `51%` Survival rate
-               """)
-    st.image(r"gr.PNG")
+# ## Working Button:
+# if st.button("Working"):                                                      # creating Working button, which gets some survival tips & info.
+#     st.write("""# How's prediction Working :- Insider Survival Facts and Tips: 
+#              - Only about `32%` of passengers survived In this Accident\n
+#              - Ticket price:
+#                     1st-class: $150-$435 ; 2nd-class: $60 ; 3rd-class: $15-$40\n
+#              - About Family Factor:
+#                 If You Boarded with atleast one family member `51%` Survival rate
+#                """)
+#     st.image(r"gr.PNG")
 
 ## Author Info.
 if st.button("Author"):
-    st.write("## @ Abhijit")
+    st.write("## @ Shawn")
