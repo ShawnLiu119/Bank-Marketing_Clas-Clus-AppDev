@@ -55,6 +55,8 @@ features, we reduced dimensionality and mitigated potential collinearity.
 
 ##### Model Performance
 ![Capture](https://user-images.githubusercontent.com/43327902/185464003-1695e572-3d13-4e6d-89a0-db08bfb64637.PNG)
+
+The table shows that all the models perform within 2% accuracy of each
 other. Differences arise when observing the precision, recall, and F1 scores.
 The Neural Network model performs with the highest recall while the Logistic
 Regression model is performing quite poorly with regards to recall.
@@ -75,5 +77,8 @@ required to make better informed business decisions about marketing strategy
 and budget. A tableau dashboard was built to support the Rico Banco teams in
 tracking the real-time progress of current and future campaign performance.
 ![image](https://user-images.githubusercontent.com/43327902/185464191-cd21e985-8c23-4e71-85a8-cd6b73c35584.png)
-https://public.tableau.com/app/profile/lisa.izquierdo/viz/498_project_dashboar
-d/FinalStory?publish=yes
+https://public.tableau.com/app/profile/lisa.izquierdo/viz/498_project_dashboard/FinalStory?publish=yes
+
+##### Web Application
+![image](https://user-images.githubusercontent.com/43327902/185464440-ed7064df-d2fb-4f06-b7b6-4670d7cbe84b.png)
+https://shawnliu119-capstoneproject-bankingmarketin-mobileappapp-9qiu3z.streamlitapp.com/
