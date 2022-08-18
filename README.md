@@ -1,7 +1,7 @@
 # CapstoneProject_BankingMarketing
 Bank Marketing Data - Supervised &amp; Unsupervised
 
-##### Project Overview
+### Project Overview
 Rico Banco is a Portuguese bank serving retail clients for over 25 years. Given
 the amount of customer loyalty involved, banking is a notoriously difficult
 industry to retain customers, let alone grow. An acute understanding of whom
@@ -11,7 +11,7 @@ practices through advanced modeling with machine learning and data
 visualization to build a marketing strategy that can catalyze customer growth
 over the short term.
 
-##### Project Goals and Business Opportunity
+### Project Goals and Business Opportunity
 Consumer preferences and requirements are always changing. Rico Banco
 needs to monitor constantly its customer base. Although no two customers are
 the same, considering customer segments helps us identify the broad
@@ -20,7 +20,7 @@ this analytical endeavor, we are also aware of the potential for cost and resour
 optimization that are available to us. Analytical approaches to conventional
 marketing practice are efficient.
 
-##### Deliverables
+### Deliverables
 To build a marketing strategy to capture market share, we will provide Rico
 Banco executives with a benison of deliverables to better understand its
 customer base. This goals of this project are to deliver the following:
@@ -36,7 +36,7 @@ descriptive statistics, socioeconomic indices, as well as a target variable
 identifying whether the individual subscribed to the term deposit as a result of
 the call.
 
-##### Methodology
+### Methodology
 Before we executed our modeling, we ran extensive Exploratory Data Analysis
 (EDA) on the input data, implemented data transformations, and created new
 features to make the analysis more robust. We also used an oversampling
@@ -53,7 +53,7 @@ of our customer base. With the Principal Components Analysis (PCA), for
 numeric features and Factor Analysis of Mixed Data (FAMD) for categorical
 features, we reduced dimensionality and mitigated potential collinearity.
 
-##### Model Performance
+### Model Performance
 ![Capture](https://user-images.githubusercontent.com/43327902/185464003-1695e572-3d13-4e6d-89a0-db08bfb64637.PNG)
 
 The table shows that all the models perform within 2% accuracy of each
@@ -70,7 +70,7 @@ of subscribing to term deposits. It would ultimately be costlier to Rico Banco
 to miss out on potential customers than it would to spend time and money
 making marketing outreach to those who will not subscribe at all.
 
-##### Data Visualization Dashboards
+### Data Visualization Dashboards
 One of the primary goals of this project is to ensure that the marketing and
 leadership teams at Rico Banco have access to the insights and analytics
 required to make better informed business decisions about marketing strategy
@@ -79,6 +79,6 @@ tracking the real-time progress of current and future campaign performance.
 ![image](https://user-images.githubusercontent.com/43327902/185464191-cd21e985-8c23-4e71-85a8-cd6b73c35584.png)
 https://public.tableau.com/app/profile/lisa.izquierdo/viz/498_project_dashboard/FinalStory?publish=yes
 
-##### Web Application
+### Web Application
 ![image](https://user-images.githubusercontent.com/43327902/185464440-ed7064df-d2fb-4f06-b7b6-4670d7cbe84b.png)
 https://shawnliu119-capstoneproject-bankingmarketin-mobileappapp-9qiu3z.streamlitapp.com/
