@@ -149,7 +149,7 @@ if st.button("Predict"):                                                        
         st.write("**Subscription Probability Chances :** 'NO': {}%  'YES': {}% ".format(round((proba[0,0])*100,2),round((proba[0,1])*100,2)))
     else:
         st.write("***This customer is probably not interested...***")
-        st.image("MobileAppV2/notcall.png", use_column_width=True)
+        st.image("MobileAppV2/notcall.JPG", use_column_width=True)
         st.write("**Subscription Probability Chances :** 'NO': {}%  'YES': {}% ".format(round((proba[0,0])*100,2),round((proba[0,1])*100,2)))
 
 # ## Working Button:
